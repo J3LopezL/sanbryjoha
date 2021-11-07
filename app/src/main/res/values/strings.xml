@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Vinilos App</string>
     <string name="collector">Coleccionista</string>
-    <string name="agregar_cancion">Agregar Canción</string>
+    <string name="agregar_cancion">Agregar Canciones</string>
     <string name="visitor">Visitante</string>
     <string name="albums_title">Albumes</string>
     <string name="logout">Salir</string>

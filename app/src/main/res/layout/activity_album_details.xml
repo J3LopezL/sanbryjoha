@@ -50,6 +50,8 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/album_scrolling_content" />
+    <include
+        android:id="@+id/scTracksList"
+        layout="@layout/album_scrolling_content" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

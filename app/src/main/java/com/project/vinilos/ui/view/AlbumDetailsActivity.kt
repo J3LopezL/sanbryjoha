@@ -3,11 +3,15 @@ package com.project.vinilos.ui.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.project.vinilos.R
 import com.project.vinilos.data.models.Album
+import com.project.vinilos.data.models.Performers
+import com.project.vinilos.data.models.Tracks
 import com.project.vinilos.databinding.ActivityAlbumDetailsBinding
 import com.squareup.picasso.MemoryPolicy
 import com.squareup.picasso.Picasso
@@ -15,13 +19,25 @@ import com.squareup.picasso.Picasso
 class AlbumDetailsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAlbumDetailsBinding
+    private lateinit var adapter:TracksAdapter
+    private val tracksList = mutableListOf<Tracks>()
+    private val performersList = mutableListOf<Performers>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAlbumDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        initRecyclerView()
 
         val album = intent.extras?.get("extra_object") as Album
+        for(track in album.tracks){
+            tracksList.add(track)
+        }
+
+        for(performer in album.performers){
+            performersList.add(performer)
+        }
+
         setSupportActionBar(findViewById(R.id.toolbar))
         Picasso.get().load(album.cover)
             .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)
@@ -37,20 +53,12 @@ class AlbumDetailsActivity : AppCompatActivity() {
 
         val artist = findViewById<TextView>(R.id.tvAlbumDetailsArtist)
         artist.text = album.recordLabel
-
-    if (album.tracks.isNotEmpty()) {
-    val nameTracks = findViewById<TextView>(R.id.tvTrackTitle)
-    nameTracks.text = album.tracks[0].name
-
-    val nameDuration = findViewById<TextView>(R.id.tvTrackDuration)
-    nameDuration.text = album.tracks[0].duration
-
-    val nameArtist = findViewById<TextView>(R.id.tvTrackArtist)
-    nameArtist.text = album.tracks[0].name
-    }else{
-        val nameTracks = findViewById<TextView>(R.id.tvTrackTitle)
-        nameTracks.text =  "El Artista no tiene pistas asociadas"
     }
+
+    private fun initRecyclerView(){
+        adapter = TracksAdapter(tracksList, performersList)
+        binding.scTracksList.rvTracks.layoutManager = LinearLayoutManager(this)
+        binding.scTracksList.rvTracks.adapter = adapter
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
