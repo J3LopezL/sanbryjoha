@@ -42,67 +42,24 @@
             android:layout_height="wrap_content"
             tools:text="@string/description" />
 
-
-
+        <TextView
+            android:id="@+id/songs"
+            android:textColor="#78909C"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            tools:text="@string/songs" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/album_border"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/ivAlbumCover"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/play_button"
-                android:scaleType="centerCrop" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tvTrackTitle"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:textColor="#000000"
-                    android:textSize="16sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:text="Track Name" />
-
-                <TextView
-                    android:id="@+id/tvTrackArtist"
-                    android:layout_marginLeft="5dp"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="16sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    tools:text="Juan Perez" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="right"
-                android:gravity="right"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tvTrackDuration"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"
-                    android:layout_marginRight="10dp"
-                    tools:text="5:50" />
-            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTracks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </androidx.recyclerview.widget.RecyclerView>
 
         </LinearLayout>
 
@@ -119,14 +76,7 @@
                 android:background="@drawable/login_button"
                 android:text="@string/agregar_cancion"
                 android:textColor="#FFFFFF"
-                android:textSize="14sp"
-                />
+                android:textSize="14sp" />
         </LinearLayout>
-
-
-
     </LinearLayout>
-
-
-
 </androidx.core.widget.NestedScrollView>
