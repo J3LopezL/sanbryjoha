@@ -1,4 +1,4 @@
-package com.project.vinilos.ui.view
+package com.project.vinilos.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
 import com.project.vinilos.R
-import com.project.vinilos.data.models.Album
+import com.project.vinilos.model.data.models.Album
 import com.project.vinilos.databinding.ActivityAlbumDetailsBinding
 import com.squareup.picasso.MemoryPolicy
 import com.squareup.picasso.Picasso

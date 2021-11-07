@@ -1,6 +1,6 @@
-package com.project.vinilos.data.network
+package com.project.vinilos.model.data.network
 
-import com.project.vinilos.data.models.Album
+import com.project.vinilos.model.data.models.Album
 import retrofit2.Response
 import retrofit2.http.GET
 

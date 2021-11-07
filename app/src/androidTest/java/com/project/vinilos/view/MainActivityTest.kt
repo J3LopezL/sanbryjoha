@@ -1,4 +1,4 @@
-package com.project.vinilos.ui.view
+package com.project.vinilos.view
 
 
 import android.view.View

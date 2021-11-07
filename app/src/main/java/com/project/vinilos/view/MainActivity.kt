@@ -1,4 +1,4 @@
-package com.project.vinilos.ui.view
+package com.project.vinilos.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
