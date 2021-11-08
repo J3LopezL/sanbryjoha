@@ -1,17 +1,16 @@
-package com.project.vinilos.ui.view
+package com.project.vinilos.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.project.vinilos.R
-import com.project.vinilos.data.models.Album
-import com.project.vinilos.data.models.Performers
-import com.project.vinilos.data.models.Tracks
+import com.project.vinilos.model.data.models.Album
+import com.project.vinilos.model.data.models.Performers
+import com.project.vinilos.model.data.models.Tracks
 import com.project.vinilos.databinding.ActivityAlbumDetailsBinding
 import com.squareup.picasso.MemoryPolicy
 import com.squareup.picasso.Picasso

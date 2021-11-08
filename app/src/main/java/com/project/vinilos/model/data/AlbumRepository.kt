@@ -1,8 +1,8 @@
-package com.project.vinilos.data
+package com.project.vinilos.model.data
 
-import com.project.vinilos.data.models.Album
-import com.project.vinilos.data.models.AlbumProvider
-import com.project.vinilos.data.network.AlbumService
+import com.project.vinilos.model.data.models.Album
+import com.project.vinilos.model.data.models.AlbumProvider
+import com.project.vinilos.model.data.network.AlbumService
 
 class AlbumRepository {
 

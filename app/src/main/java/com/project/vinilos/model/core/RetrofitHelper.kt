@@ -1,4 +1,4 @@
-package com.project.vinilos.core
+package com.project.vinilos.model.core
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

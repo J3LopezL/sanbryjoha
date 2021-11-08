@@ -1,7 +1,7 @@
-package com.project.vinilos.data.network
+package com.project.vinilos.model.data.network
 
-import com.project.vinilos.core.RetrofitHelper
-import com.project.vinilos.data.models.Album
+import com.project.vinilos.model.core.RetrofitHelper
+import com.project.vinilos.model.data.models.Album
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

@@ -1,4 +1,4 @@
-package com.project.vinilos.ui.view
+package com.project.vinilos.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,13 +7,13 @@ import android.view.MenuItem
 import java.io.Serializable
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.project.vinilos.data.models.Album
+import com.project.vinilos.model.data.models.Album
 import com.project.vinilos.databinding.ActivityAlbumsListBinding
-import com.project.vinilos.ui.viewmodel.AlbumViewModel
+import com.project.vinilos.viewmodel.AlbumViewModel
 import androidx.appcompat.widget.Toolbar
+import androidx.core.view.isVisible
 import com.project.vinilos.R
 
 

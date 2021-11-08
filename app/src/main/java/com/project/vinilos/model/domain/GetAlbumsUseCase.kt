@@ -1,7 +1,7 @@
-package com.project.vinilos.domain
+package com.project.vinilos.model.domain
 
-import com.project.vinilos.data.AlbumRepository
-import com.project.vinilos.data.models.Album
+import com.project.vinilos.model.data.AlbumRepository
+import com.project.vinilos.model.data.models.Album
 
 class GetAlbumsUseCase {
     private val repository = AlbumRepository()
