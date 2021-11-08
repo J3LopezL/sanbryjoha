@@ -16,7 +16,15 @@
 
     <style name="ToolBarTheme" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="colorControlNormal">@color/white</item>
-        <item name="titleTextColor">#FFFFFF</item>
-        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="titleTextColor">@color/white</item>
     </style>
+
+    <style name="Theme.Vinilos.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Vinilos.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Vinilos.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
