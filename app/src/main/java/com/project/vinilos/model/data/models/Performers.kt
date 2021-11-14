@@ -2,7 +2,7 @@ package com.project.vinilos.model.data.models
 
 import java.io.Serializable
 
-data class Performers (
+data class Performer (
     val id : Int,
     val name : String,
     val image : String,

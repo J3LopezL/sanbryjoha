@@ -10,7 +10,7 @@ class AlbumRepository {
 
     suspend fun getAllAlbums():List<Album>{
         val response = api.getAlbums()
-        AlbumProvider.albums = response
+        response.also { it.also { AlbumProvider.albums } }
         return response
     }
 }

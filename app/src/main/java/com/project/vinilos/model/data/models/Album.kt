@@ -12,6 +12,6 @@ data class Album (
     val genre:String,
     val recordLabel:String,
     val tracks : List<Tracks>,
-    val performers : List<Performers>,
+    val performers : List<Performer>,
     val comments : List<Comments>
 ) : Serializable
