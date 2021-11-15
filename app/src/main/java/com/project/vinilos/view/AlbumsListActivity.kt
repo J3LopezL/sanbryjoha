@@ -9,7 +9,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.project.vinilos.model.data.models.Album
+import com.project.vinilos.model.data.models.dataClass.Album
 import com.project.vinilos.databinding.ActivityAlbumsListBinding
 import com.project.vinilos.viewmodel.AlbumViewModel
 import androidx.appcompat.widget.Toolbar
@@ -39,6 +39,7 @@ class AlbumsListActivity : AppCompatActivity(), AlbumsAdapter.OnItemClickListene
             adapter.albums = it
             adapter.notifyDataSetChanged()
         })
+        onCollectorsClick()
 
         val toolbar : Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -51,6 +52,21 @@ class AlbumsListActivity : AppCompatActivity(), AlbumsAdapter.OnItemClickListene
         adapter = AlbumsAdapter(albumsList, this)
         binding.rvAlbums.layoutManager = LinearLayoutManager(this)
         binding.rvAlbums.adapter = adapter
+    }
+
+    fun onCollectorsClick() {
+        binding.buttonFooterNavigation.setOnNavigationItemReselectedListener{
+
+            when (it.title) {
+                "Collectors" ->  intent = Intent(this, CollectorListActivity::class.java)
+                "Home" -> intent = Intent(this, MainActivity::class.java)
+                "Albums" -> intent = Intent(this, AlbumsListActivity::class.java)
+                else -> { // Note the block
+                    print("No item selected")
+                }
+            }
+            startActivity(intent)
+        }
     }
 
     override fun onItemClick(album: Album) {

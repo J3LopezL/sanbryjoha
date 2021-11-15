@@ -36,4 +36,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/button_footer_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/primary"
+        app:menu="@menu/menu_footer"
+        app:itemIconTint="#FFFFFF"
+        app:itemTextColor="#FFFFFF"
+        >
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
 </FrameLayout>
+
+

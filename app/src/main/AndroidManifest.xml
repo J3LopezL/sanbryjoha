@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Vinilos">
         <activity
             android:name=".view.CollectorListActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".view.AlbumDetailsActivity"
             android:exported="true"
