@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/FrameLayout"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/PerformersListActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.PerformersListActivity"
-    android:orientation="vertical">
+    tools:context=".view.PerformersListActivity">
 
     <include layout="@layout/action_bar_toolbar"/>
 
     <TextView
-        android:id="@+id/signs"
+        android:id="@+id/tvCollectorTitle"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="70dp"
+        android:textSize="16sp"
+        android:textColor="#000000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:textColor="#000000"
-        android:text="Performers"
-        android:textSize="20sp" />
+        android:text="@string/performers" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPerformers"
-        android:layout_width="match_parent"
-        android:layout_height="535dp"
-        android:layout_gravity="top"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_performer" />
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_performer"
+        android:layout_gravity="center"/>
 
     <ProgressBar
         android:id="@+id/progress"
@@ -40,18 +40,13 @@
         app:layout_constraintBaseline_toBottomOf="parent"
         tools:ignore="MissingConstraints" />
 
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/button_footer_navigation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="@color/primary"
-            app:menu="@menu/menu_footer"
-            app:itemIconTint="#FFFFFF"
-            app:itemTextColor="#FFFFFF"
-            >
-        </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-
-</LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/button_footer_navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/primary"
+        app:menu="@menu/menu_footer"
+        app:itemIconTint="#FFFFFF"
+        app:itemTextColor="#FFFFFF"/>
+</FrameLayout>

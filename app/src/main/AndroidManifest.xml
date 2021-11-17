@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vinilos">
         <activity
+            android:name=".view.PerformerDetailsActivity"
+            android:label="@string/title_activity_scrolling_album_details"
+            android:parentActivityName=".view.PerformersListActivity"
+            android:theme="@style/Theme.Vinilos.NoActionBar"
+            android:exported="true" />
+        <activity
             android:name=".view.CollectorListActivity"
             android:exported="true" />
         <activity
@@ -28,17 +34,18 @@
                 android:value="com.project.vinilos.view.MainActivity" />
         </activity>
         <activity
-            android:name="com.project.vinilos.view.PerformersListActivity"
-            android:exported="true"
-            android:parentActivityName="com.project.vinilos.view.PerformersListActivity"
-            android:label="@string/title_activity_scrolling_album_details"
-            android:theme="@style/Theme.Vinilos.NoActionBar" />
-
+            android:name=".view.PerformersListActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.vinilos.view.MainActivity" />
+        </activity>
         <activity
-            android:name="com.project.vinilos.view.MainActivity"
+            android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

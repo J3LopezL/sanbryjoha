@@ -9,7 +9,6 @@
 
     <include layout="@layout/action_bar_toolbar"/>
 
-
     <TextView
         android:id="@+id/tvCollectorTitle"
         android:layout_marginLeft="15dp"
@@ -20,16 +19,13 @@
         android:layout_height="wrap_content"
         android:text="@string/collectors" />
 
-
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvCollector"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="70dp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_gravity="center">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/test"
@@ -47,7 +43,5 @@
         android:background="@color/primary"
         app:menu="@menu/menu_footer"
         app:itemIconTint="#FFFFFF"
-        app:itemTextColor="#FFFFFF"
-        >
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+        app:itemTextColor="#FFFFFF" />
 </FrameLayout>

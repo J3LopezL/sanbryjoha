@@ -11,7 +11,8 @@ import kotlinx.android.synthetic.main.item_performer.view.*
 
 class PerformersAdapter(
     var performers:List<Performer>,
-    private val listener:OnItemClickListener):RecyclerView.Adapter<PerformersAdapter.PerformerHolder>(){
+    private val listener:OnItemClickListener
+    ):RecyclerView.Adapter<PerformersAdapter.PerformerHolder>(){
 
     inner class PerformerHolder(val view:View):RecyclerView.ViewHolder(view), View.OnClickListener{
         fun render(performer:Performer){
@@ -30,6 +31,8 @@ class PerformersAdapter(
         }
 
         override fun onClick(v: View?) {
+            val performer = performers[adapterPosition]
+            listener.onItemClick(performer)
         }
     }
 
