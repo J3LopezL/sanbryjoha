@@ -1,7 +1,7 @@
 package com.project.vinilos.model.data.network
 
 import com.project.vinilos.model.core.RetrofitHelper
-import com.project.vinilos.model.data.models.Performer
+import com.project.vinilos.model.data.models.dataClass.Performer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

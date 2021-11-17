@@ -33,9 +33,9 @@
             android:parentActivityName="com.project.vinilos.view.PerformersListActivity"
             android:label="@string/title_activity_scrolling_album_details"
             android:theme="@style/Theme.Vinilos.NoActionBar" />
+
         <activity
             android:name="com.project.vinilos.view.MainActivity"
-            android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

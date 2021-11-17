@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/PerformersListActivity"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".view.PerformersListActivity"
     android:orientation="vertical">
 
@@ -22,9 +22,9 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPerformers"
-        android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="535dp"
+        android:layout_gravity="top"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_performer" />
 
@@ -39,5 +39,19 @@
         app:layout_constraintBaseline_toTopOf="parent"
         app:layout_constraintBaseline_toBottomOf="parent"
         tools:ignore="MissingConstraints" />
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/button_footer_navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/primary"
+            app:menu="@menu/menu_footer"
+            app:itemIconTint="#FFFFFF"
+            app:itemTextColor="#FFFFFF"
+            >
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
 
 </LinearLayout>

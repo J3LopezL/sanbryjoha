@@ -1,7 +1,7 @@
-package com.project.vinilos.model.data
+package com.project.vinilos.model.data.repositories
 
-import com.project.vinilos.model.data.models.Performer
-import com.project.vinilos.model.data.models.PerformerProvider
+import com.project.vinilos.model.data.models.dataClass.Performer
+import com.project.vinilos.model.data.models.providers.PerformerProvider
 import com.project.vinilos.model.data.network.PerformerService
 
 class PerformerRepository {

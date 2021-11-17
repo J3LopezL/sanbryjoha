@@ -11,7 +11,7 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.project.vinilos.R
 import com.project.vinilos.databinding.ActivityPerformersListBinding
-import com.project.vinilos.model.data.models.Performer
+import com.project.vinilos.model.data.models.dataClass.Performer
 import com.project.vinilos.viewmodel.PerformerViewModel
 
 class PerformersListActivity : AppCompatActivity(), PerformersAdapter.OnItemClickListener {

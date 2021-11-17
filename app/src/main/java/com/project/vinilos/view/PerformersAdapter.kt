@@ -4,7 +4,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.project.vinilos.R
-import com.project.vinilos.model.data.models.Performer
+import com.project.vinilos.model.data.models.dataClass.Performer
 import com.squareup.picasso.Picasso
 import com.squareup.picasso.MemoryPolicy
 import kotlinx.android.synthetic.main.item_performer.view.*

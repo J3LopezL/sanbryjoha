@@ -8,6 +8,6 @@ data class Collector(
     val telephone:String,
     val email: String,
     val comments: List<Comments>,
-    val favoritePerformers: List<Performers>,
+    val favoritePerformers: List<Performer>,
     val collectorAlbums: List<CollectorAlbums>,
     ) : Serializable
