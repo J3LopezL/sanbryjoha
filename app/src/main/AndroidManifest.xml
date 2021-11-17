@@ -12,20 +12,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vinilos">
         <activity
-            android:name="com.project.vinilos.view.AlbumDetailsActivity"
+            android:name=".view.CollectorListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.AlbumDetailsActivity"
             android:exported="true"
-            android:parentActivityName="com.project.vinilos.view.AlbumsListActivity"
             android:label="@string/title_activity_scrolling_album_details"
+            android:parentActivityName=".view.AlbumsListActivity"
             android:theme="@style/Theme.Vinilos.NoActionBar" />
         <activity
-            android:name="com.project.vinilos.view.AlbumsListActivity"
+            android:name=".view.AlbumsListActivity"
             android:exported="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.project.vinilos.view.MainActivity" />
         </activity>
         <activity
-            android:name="com.project.vinilos.view.MainActivity"
+            android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
