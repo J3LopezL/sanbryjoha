@@ -15,16 +15,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val collectorButton = findViewById<Button>(R.id.collector_button)
-        collectorButton.setOnClickListener{
+        binding.collectorButton.setOnClickListener {
             val intent = Intent(this, AlbumsListActivity::class.java)
             startActivity(intent)
         }
 
-        val visitorButton = findViewById<Button>(R.id.visitor_button)
-        visitorButton.setOnClickListener{
+        binding.visitorButton.setOnClickListener {
             val intent = Intent(this, AlbumsListActivity::class.java)
             startActivity(intent)
         }
+
     }
 }

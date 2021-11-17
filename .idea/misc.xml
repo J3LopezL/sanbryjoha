@@ -13,6 +13,7 @@
         <entry key="app/src/main/res/layout/activity_album_details.xml" value="0.11503623188405797" />
         <entry key="app/src/main/res/layout/activity_albums.xml" value="0.25987841945288753" />
         <entry key="app/src/main/res/layout/activity_albums_list.xml" value="0.2557291666666667" />
+        <entry key="app/src/main/res/layout/activity_collector_list.xml" value="0.253125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_performers_list.xml" value="0.22" />
         <entry key="app/src/main/res/layout/album_scrolling_content.xml" value="0.25" />
@@ -20,6 +21,13 @@
         <entry key="app/src/main/res/layout/item_performer.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_track.xml" value="0.335" />
         <entry key="app/src/main/res/menu/menu_performers.xml" value="0.16546052631578947" />
+        <entry key="app/src/main/res/layout/item_album.xml" value="0.4360086767895879" />
+        <entry key="app/src/main/res/layout/item_collector.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/layout/item_track.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/prueba.xml" value="0.20018115942028986" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.21510416666666668" />
+        <entry key="app/src/main/res/menu/footer_navigation_items.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/menu_footer.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/menu/menu_scrolling_album_details.xml" value="0.21875" />
         <entry key="app/src/main/res/menu/toolbar_options_menu.xml" value="0.21875" />
       </map>

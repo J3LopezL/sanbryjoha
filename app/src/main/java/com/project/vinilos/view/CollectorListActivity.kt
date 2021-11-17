@@ -1,46 +1,42 @@
 package com.project.vinilos.view
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import java.io.Serializable
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.project.vinilos.model.data.models.dataClass.Album
-import com.project.vinilos.databinding.ActivityAlbumsListBinding
-import com.project.vinilos.viewmodel.AlbumViewModel
-import androidx.appcompat.widget.Toolbar
-import androidx.core.view.isVisible
 import com.project.vinilos.R
+import com.project.vinilos.databinding.ActivityCollectorListBinding
+import com.project.vinilos.model.data.models.dataClass.Collector
+import com.project.vinilos.viewmodel.CollectorViewModel
 
-
-class AlbumsListActivity : AppCompatActivity(), AlbumsAdapter.OnItemClickListener {
-    private lateinit var binding : ActivityAlbumsListBinding
-    private val albumViewModel: AlbumViewModel by viewModels()
-
-    private lateinit var adapter:AlbumsAdapter
-    private val albumsList = mutableListOf<Album>()
+class CollectorListActivity : AppCompatActivity(), CollectorAdapter.OnItemClickListener {
+    private lateinit var binding : ActivityCollectorListBinding
+    // conexión del view model a la activity
+    private val collectorViewModel: CollectorViewModel by viewModels()
+    private lateinit var adapter:CollectorAdapter
+    private val collectorList = mutableListOf<Collector>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityAlbumsListBinding.inflate(layoutInflater)
+        binding = ActivityCollectorListBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initRecyclerView()
-        albumViewModel.onCreate()
+        collectorViewModel.onCreate()
 
-        albumViewModel.isLoading.observe(this, Observer {
-            binding.loading.isVisible = it
-        })
 
-        albumViewModel.album.observe(this, Observer {
-            adapter.albums = it
+        collectorViewModel.collectorModelLiveData.observe(this, Observer { currentCollector ->
+            adapter.collector = currentCollector
             adapter.notifyDataSetChanged()
         })
+
         onCollectorsClick()
 
+        // barra de header
         val toolbar : Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.title = "Vinilos App"
@@ -49,9 +45,9 @@ class AlbumsListActivity : AppCompatActivity(), AlbumsAdapter.OnItemClickListene
     }
 
     private fun initRecyclerView(){
-        adapter = AlbumsAdapter(albumsList, this)
-        binding.rvAlbums.layoutManager = LinearLayoutManager(this)
-        binding.rvAlbums.adapter = adapter
+        adapter = CollectorAdapter(collectorList, this)
+        binding.rvCollector.layoutManager = LinearLayoutManager(this)
+        binding.rvCollector.adapter = adapter
     }
 
     fun onCollectorsClick() {
@@ -69,10 +65,11 @@ class AlbumsListActivity : AppCompatActivity(), AlbumsAdapter.OnItemClickListene
         }
     }
 
-    override fun onItemClick(album: Album) {
-        val intent = Intent(this, AlbumDetailsActivity::class.java)
-        intent.putExtra("extra_object", album as Serializable)
-        startActivity(intent)
+    override fun onItemClick(collector: Collector) {
+        println("IR a la siguiente pagina al dar click en un item")
+//        val intent = Intent(this, AlbumDetailsActivity::class.java)
+//        intent.putExtra("extra_object", collector as Serializable)
+//        startActivity(intent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -81,14 +78,12 @@ class AlbumsListActivity : AppCompatActivity(), AlbumsAdapter.OnItemClickListene
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item.itemId == R.id.logout) {
-            val intent = Intent(this, MainActivity::class.java)
+
+
+            val intent = Intent(this, AlbumsListActivity::class.java)
             startActivity(intent)
-        }
-        if(item.itemId == R.id.performers) {
-            val intent = Intent(this, PerformersListActivity::class.java)
-            startActivity(intent)
-        }
+
         return super.onOptionsItemSelected(item)
     }
+
 }

@@ -5,8 +5,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.project.vinilos.R
-import com.project.vinilos.model.data.models.Performer
-import com.project.vinilos.model.data.models.Tracks
+
+
+import com.project.vinilos.model.data.models.dataClass.Performer
+import com.project.vinilos.model.data.models.dataClass.Tracks
+
+
 import kotlinx.android.synthetic.main.item_track.view.*
 
 class TracksAdapter(var tracks:List<Tracks>, var performers:List<Performer>):RecyclerView.Adapter<TracksAdapter.TrackHolder>(){

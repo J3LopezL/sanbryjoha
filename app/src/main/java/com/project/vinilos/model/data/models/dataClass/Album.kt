@@ -1,4 +1,4 @@
-package com.project.vinilos.model.data.models
+package com.project.vinilos.model.data.models.dataClass
 
 import java.io.Serializable
 import java.sql.Timestamp
