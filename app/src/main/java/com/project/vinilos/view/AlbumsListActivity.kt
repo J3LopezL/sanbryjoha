@@ -85,7 +85,10 @@ class AlbumsListActivity : AppCompatActivity(), AlbumsAdapter.OnItemClickListene
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-
+        if(item.itemId == R.id.performers) {
+            val intent = Intent(this, PerformersListActivity::class.java)
+            startActivity(intent)
+        }
         return super.onOptionsItemSelected(item)
     }
 }

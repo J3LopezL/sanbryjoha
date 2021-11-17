@@ -8,9 +8,11 @@ import android.view.MenuItem
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.project.vinilos.R
+
 import com.project.vinilos.model.data.models.dataClass.Album
-import com.project.vinilos.model.data.models.dataClass.Performers
+import com.project.vinilos.model.data.models.dataClass.Performer
 import com.project.vinilos.model.data.models.dataClass.Tracks
+
 import com.project.vinilos.databinding.ActivityAlbumDetailsBinding
 import com.squareup.picasso.MemoryPolicy
 import com.squareup.picasso.Picasso
@@ -20,7 +22,7 @@ class AlbumDetailsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAlbumDetailsBinding
     private lateinit var adapter:TracksAdapter
     private val tracksList = mutableListOf<Tracks>()
-    private val performersList = mutableListOf<Performers>()
+    private val performersList = mutableListOf<Performer>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
