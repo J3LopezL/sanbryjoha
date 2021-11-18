@@ -54,15 +54,14 @@ class AlbumsListActivity : AppCompatActivity(), AlbumsAdapter.OnItemClickListene
         binding.rvAlbums.adapter = adapter
     }
 
-    fun onCollectorsClick() {
+    private fun onCollectorsClick() {
         binding.buttonFooterNavigation.setOnNavigationItemReselectedListener{
 
-            when (it.title) {
-                "Collectors" ->  intent = Intent(this, CollectorListActivity::class.java)
-                "Home" -> intent = Intent(this, MainActivity::class.java)
-                "Albums" -> intent = Intent(this, AlbumsListActivity::class.java)
+            when (it.itemId) {
+                R.id.ic_collecotrs ->  intent = Intent(this, CollectorListActivity::class.java)
+                R.id.ic_artists -> intent = Intent(this, PerformersListActivity::class.java)
                 else -> { // Note the block
-                    print("No item selected")
+                    print("No item selected or user is currently on this activity")
                 }
             }
             startActivity(intent)
@@ -85,10 +84,7 @@ class AlbumsListActivity : AppCompatActivity(), AlbumsAdapter.OnItemClickListene
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-        if(item.itemId == R.id.performers) {
-            val intent = Intent(this, PerformersListActivity::class.java)
-            startActivity(intent)
-        }
+
         return super.onOptionsItemSelected(item)
     }
 }

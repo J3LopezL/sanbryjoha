@@ -50,15 +50,14 @@ class CollectorListActivity : AppCompatActivity(), CollectorAdapter.OnItemClickL
         binding.rvCollector.adapter = adapter
     }
 
-    fun onCollectorsClick() {
+    private fun onCollectorsClick() {
         binding.buttonFooterNavigation.setOnNavigationItemReselectedListener{
 
-            when (it.title) {
-                "Collectors" ->  intent = Intent(this, CollectorListActivity::class.java)
-                "Home" -> intent = Intent(this, MainActivity::class.java)
-                "Albums" -> intent = Intent(this, AlbumsListActivity::class.java)
+            when (it.itemId) {
+                R.id.ic_artists -> intent = Intent(this, PerformersListActivity::class.java)
+                R.id.ic_albums -> intent = Intent(this, AlbumsListActivity::class.java)
                 else -> { // Note the block
-                    print("No item selected")
+                    print("No item selected or user is currently on this activity")
                 }
             }
             startActivity(intent)
@@ -78,10 +77,10 @@ class CollectorListActivity : AppCompatActivity(), CollectorAdapter.OnItemClickL
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-
-            val intent = Intent(this, AlbumsListActivity::class.java)
+        if(item.itemId == R.id.logout) {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+        }
 
         return super.onOptionsItemSelected(item)
     }

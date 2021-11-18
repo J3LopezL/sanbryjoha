@@ -13,6 +13,7 @@ import com.project.vinilos.R
 import com.project.vinilos.databinding.ActivityPerformersListBinding
 import com.project.vinilos.model.data.models.dataClass.Performer
 import com.project.vinilos.viewmodel.PerformerViewModel
+import java.io.Serializable
 
 class PerformersListActivity : AppCompatActivity(), PerformersAdapter.OnItemClickListener {
     private lateinit var binding : ActivityPerformersListBinding
@@ -26,6 +27,7 @@ class PerformersListActivity : AppCompatActivity(), PerformersAdapter.OnItemClic
         binding = ActivityPerformersListBinding.inflate(layoutInflater)
         setContentView(binding.root)
         performerRecyclerView()
+        onCollectorsClick()
         performerViewModel.onCreate()
 
         performerViewModel.performer.observe(this, { currentPerformer ->
@@ -50,6 +52,26 @@ class PerformersListActivity : AppCompatActivity(), PerformersAdapter.OnItemClic
         binding.rvPerformers.adapter = adapter
     }
 
+    private fun onCollectorsClick() {
+        binding.buttonFooterNavigation.setOnNavigationItemReselectedListener{
+
+            when (it.itemId) {
+                R.id.ic_collecotrs ->  intent = Intent(this, CollectorListActivity::class.java)
+                R.id.ic_albums -> intent = Intent(this, AlbumsListActivity::class.java)
+                else -> { // Note the block
+                    print("No item selected or user is currently on this activity")
+                }
+            }
+            startActivity(intent)
+        }
+    }
+
+    override fun onItemClick(performer: Performer) {
+        val intent = Intent(this, PerformerDetailsActivity::class.java)
+        intent.putExtra("extra_object", performer as Serializable)
+        startActivity(intent)
+    }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.toolbar_options_menu, menu)
         return super.onCreateOptionsMenu(menu)
@@ -61,10 +83,6 @@ class PerformersListActivity : AppCompatActivity(), PerformersAdapter.OnItemClic
             startActivity(intent)
         }
         return super.onOptionsItemSelected(item)
-    }
-
-    override fun onItemClick(performer: Performer) {
-        TODO("Not yet implemented")
     }
 }
 
