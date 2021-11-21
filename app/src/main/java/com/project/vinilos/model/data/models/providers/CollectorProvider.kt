@@ -1,9 +1,6 @@
 package com.project.vinilos.model.data.models.providers
 
 import com.project.vinilos.model.data.models.dataClass.Collector
-import com.project.vinilos.model.data.models.dataClass.CollectorAlbums
-import com.project.vinilos.model.data.models.dataClass.Comments
-import com.project.vinilos.model.data.models.dataClass.Performer
 
 class CollectorProvider {
     companion object {
