@@ -16,7 +16,6 @@ import com.project.vinilos.viewmodel.CollectorViewModel
 
 class CollectorListActivity : AppCompatActivity(), CollectorAdapter.OnItemClickListener {
     private lateinit var binding : ActivityCollectorListBinding
-    // conexión del view model a la activity
     private val collectorViewModel: CollectorViewModel by viewModels()
     private lateinit var adapter:CollectorAdapter
     private val collectorList = mutableListOf<Collector>()
@@ -36,7 +35,6 @@ class CollectorListActivity : AppCompatActivity(), CollectorAdapter.OnItemClickL
 
         onCollectorsClick()
 
-        // barra de header
         val toolbar : Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.title = "Vinilos App"
@@ -66,9 +64,6 @@ class CollectorListActivity : AppCompatActivity(), CollectorAdapter.OnItemClickL
 
     override fun onItemClick(collector: Collector) {
         println("IR a la siguiente pagina al dar click en un item")
-//        val intent = Intent(this, AlbumDetailsActivity::class.java)
-//        intent.putExtra("extra_object", collector as Serializable)
-//        startActivity(intent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
