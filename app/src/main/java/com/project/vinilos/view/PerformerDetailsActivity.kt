@@ -8,15 +8,11 @@ import android.view.MenuItem
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.project.vinilos.R
-import com.project.vinilos.databinding.ActivityAlbumDetailsBinding
 import com.project.vinilos.databinding.ActivityPerformerDetailsBinding
 import com.project.vinilos.model.data.models.dataClass.Album
 import com.project.vinilos.model.data.models.dataClass.Performer
-import com.project.vinilos.model.data.models.dataClass.Tracks
 import com.squareup.picasso.MemoryPolicy
 import com.squareup.picasso.Picasso
-import java.io.Serializable
-import java.text.SimpleDateFormat
 
 class PerformerDetailsActivity : AppCompatActivity(), AlbumsAdapter.OnItemClickListener {
     private lateinit var binding: ActivityPerformerDetailsBinding
