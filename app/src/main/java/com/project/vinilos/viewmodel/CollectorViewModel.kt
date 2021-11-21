@@ -20,7 +20,6 @@ class CollectorViewModel: ViewModel() {
         // corrutina - Se ejecuta en otro hilo para no bloquear el principal
         // scope es donde se va a ejecutar la corrutuina
         viewModelScope.launch {
-            getCollectorUseCase.metodo()
             val result = getCollectorUseCase()
             // verifica si la respuesta de la api no es null o empty y la ponemos en el liveData para uso en la activity
             if (!result.isNullOrEmpty()){
