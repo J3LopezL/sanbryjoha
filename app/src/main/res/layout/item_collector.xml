@@ -20,7 +20,7 @@
             android:layout_height="250dp"
             android:layout_marginBottom="60dp"
             android:scaleType="fitCenter"
-            />
+            android:contentDescription="imagen que mustra al coleccionista dentro de una lista" />
 
 
         <LinearLayout
@@ -36,7 +36,8 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="10dp"
-                android:scaleType="fitEnd" />
+                android:scaleType="fitEnd"
+                android:contentDescription="TODO" />
 
             <LinearLayout
                 android:layout_width="wrap_content"

@@ -18,7 +18,7 @@
             android:layout_height="250dp"
             android:layout_marginBottom="60dp"
             android:scaleType="fitCenter"
-            />
+            android:contentDescription="imagen que muestra al artista seleccionado" />
 
         <LinearLayout
             android:layout_width="match_parent"
