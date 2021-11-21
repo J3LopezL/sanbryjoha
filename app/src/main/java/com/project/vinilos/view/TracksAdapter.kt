@@ -19,7 +19,7 @@ class TracksAdapter(var tracks:List<Tracks>, var performers:List<Performer>):Rec
             view.tvTrackTitle.text = track.name
             view.tvTrackDuration.text = track.duration
 
-            var performer:String = "Desconocido"
+            var performer = "Desconocido"
             if (performers.isNotEmpty()){
                 performer = performers[0].name
             }
