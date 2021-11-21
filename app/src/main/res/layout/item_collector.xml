@@ -20,7 +20,7 @@
             android:layout_height="250dp"
             android:layout_marginBottom="60dp"
             android:scaleType="fitCenter"
-            android:contentDescription="imagen que mustra al coleccionista dentro de una lista" />
+            android:contentDescription="@string/descriptionCollectorList" />
 
 
         <LinearLayout
@@ -37,7 +37,7 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="10dp"
                 android:scaleType="fitEnd"
-                android:contentDescription="TODO" />
+                android:contentDescription="@string/descriptionCollector" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
                     android:layout_marginStart="5dp"
                     android:textColor="#000000"
                     android:textSize="16sp"
-                    android:text="Collector Name" />
+                    android:text="@string/CollectorName" />
 
                 <TextView
                     android:id="@+id/tvCollectorPhone"
@@ -64,7 +64,7 @@
                     android:textColor="@color/text_secondary"
                     android:layout_marginStart="5dp"
                     android:textSize="12sp"
-                    android:text="Collector telephone" />
+                    android:text="@string/CollectorTelephone" />
 
                 <TextView
                     android:id="@+id/tvCollectorEmail"
@@ -73,7 +73,7 @@
                     android:textColor="@color/text_secondary"
                     android:layout_marginStart="5dp"
                     android:textSize="12sp"
-                    android:text="Collector email" />
+                    android:text="@string/CollectorEmail" />
             </LinearLayout>
 
         </LinearLayout>

@@ -21,4 +21,10 @@
     <string name="namesign">nameSign</string>
     <string name="minisign">miniSign</string>
     <string name="siger">Siger</string>
+    <string name="CollectorTelephone">Collector telephone</string>
+    <string name="CollectorName">Collector Name</string>
+    <string name="CollectorEmail">Collector email</string>
+    <string name="descriptionArtistSelected">imagen que muestra al artista seleccionado</string>
+    <string name="descriptionCollector">Imagen que identifica la descripción del coleccionista</string>
+    <string name="descriptionCollectorList">imagen que mustra al coleccionista dentro de una lista</string>
 </resources>

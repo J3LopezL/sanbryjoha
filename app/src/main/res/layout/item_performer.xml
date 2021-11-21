@@ -18,7 +18,7 @@
             android:layout_height="250dp"
             android:layout_marginBottom="60dp"
             android:scaleType="fitCenter"
-            android:contentDescription="imagen que muestra al artista seleccionado" />
+            android:contentDescription="@string/descriptionArtistSelected" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -52,7 +52,7 @@
                     android:layout_marginStart="5dp"
                     android:textColor="#000000"
                     android:textSize="16sp"
-                    android:text="Collector Name" />
+                    android:text="@string/CollectorName" />
 
                 <TextView
                     android:id="@+id/tvPerformerBirthDate"
@@ -61,7 +61,7 @@
                     android:textColor="@color/text_secondary"
                     android:layout_marginStart="5dp"
                     android:textSize="12sp"
-                    android:text="Collector telephone" />
+                    android:text="@string/CollectorTelephone" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
