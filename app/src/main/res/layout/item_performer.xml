@@ -23,7 +23,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:background="@drawable/album_border"
             android:orientation="horizontal"
             android:layout_gravity="bottom">
@@ -32,8 +32,8 @@
                 android:id="@+id/ivPerformerAvatar"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_marginLeft="10sp"
-                android:layout_marginRight="5sp"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="5sp"
                 android:layout_marginBottom="5sp"
                 android:scaleType="centerCrop"
                 android:contentDescription="@string/run" />
@@ -49,7 +49,7 @@
                     android:id="@+id/tvPerformerName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:text="Collector Name" />
@@ -59,7 +59,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/text_secondary"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
                     android:textSize="12sp"
                     android:text="Collector telephone" />
             </LinearLayout>
