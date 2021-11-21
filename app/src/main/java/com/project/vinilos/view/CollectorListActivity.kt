@@ -28,7 +28,7 @@ class CollectorListActivity : AppCompatActivity(), CollectorAdapter.OnItemClickL
         collectorViewModel.onCreate()
 
 
-        collectorViewModel.collectorModelLiveData.observe(this, Observer { currentCollector ->
+        collectorViewModel.collectorModelLiveData.observe(this, { currentCollector ->
             adapter.collector = currentCollector
             adapter.notifyDataSetChanged()
         })
