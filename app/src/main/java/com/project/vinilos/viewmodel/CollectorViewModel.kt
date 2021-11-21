@@ -4,8 +4,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.project.vinilos.model.data.models.dataClass.Collector
-import com.project.vinilos.model.data.models.providers.CollectorProvider
-import com.project.vinilos.model.domain.GetAlbumsUseCase
 import com.project.vinilos.model.domain.GetCollectorUseCase
 import kotlinx.coroutines.launch
 
