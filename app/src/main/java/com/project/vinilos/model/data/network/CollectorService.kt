@@ -9,9 +9,6 @@ class CollectorService {
     private val retrofit = RetrofitHelper.getRetrofit()
 
     suspend fun getCollectors():List<Collector> {
-        // return asincrono de la respuesta de la api
-        println("****************************************")
-        println("CollectorService")
         return   withContext(Dispatchers.IO) {
             val response = retrofit.create(CollectorApiClient::class.java).getAllCollectors()
             response.body() ?: emptyList()

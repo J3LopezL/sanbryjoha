@@ -9,8 +9,6 @@ class CollectorRepository {
     private val api = CollectorService()
 
     suspend fun getAllCollectors():List<Collector>{
-        println("****************************************")
-        println("CollectorRepository")
         val response = api.getCollectors()
         CollectorProvider.collector = response
         return response
