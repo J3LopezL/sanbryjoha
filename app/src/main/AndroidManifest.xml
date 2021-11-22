@@ -10,7 +10,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Vinilos">
+        android:theme="@style/Theme.Vinilos"
+        android:fullBackupContent="@xml/backup_descriptor">
         <activity
             android:name=".view.PerformerDetailsActivity"
             android:label="@string/title_activity_scrolling_album_details"
