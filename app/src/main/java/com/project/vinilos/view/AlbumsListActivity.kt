@@ -31,11 +31,11 @@ class AlbumsListActivity : AppCompatActivity(), AlbumsAdapter.OnItemClickListene
         initRecyclerView()
         albumViewModel.onCreate()
 
-        albumViewModel.isLoading.observe(this, Observer {
+        albumViewModel.isLoading.observe(this, {
             binding.loading.isVisible = it
         })
 
-        albumViewModel.album.observe(this, Observer {
+        albumViewModel.album.observe(this, {
             adapter.albums = it
             adapter.notifyDataSetChanged()
         })
