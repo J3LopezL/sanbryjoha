@@ -1,13 +1,12 @@
 package com.project.vinilos.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.project.vinilos.R
 import com.project.vinilos.databinding.ActivityCollectorListBinding
@@ -16,7 +15,6 @@ import com.project.vinilos.viewmodel.CollectorViewModel
 
 class CollectorListActivity : AppCompatActivity(), CollectorAdapter.OnItemClickListener {
     private lateinit var binding : ActivityCollectorListBinding
-    // conexión del view model a la activity
     private val collectorViewModel: CollectorViewModel by viewModels()
     private lateinit var adapter:CollectorAdapter
     private val collectorList = mutableListOf<Collector>()
@@ -29,14 +27,13 @@ class CollectorListActivity : AppCompatActivity(), CollectorAdapter.OnItemClickL
         collectorViewModel.onCreate()
 
 
-        collectorViewModel.collectorModelLiveData.observe(this, Observer { currentCollector ->
+        collectorViewModel.collectorModelLiveData.observe(this, { currentCollector ->
             adapter.collector = currentCollector
             adapter.notifyDataSetChanged()
         })
 
         onCollectorsClick()
 
-        // barra de header
         val toolbar : Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.title = "Vinilos App"
@@ -66,9 +63,6 @@ class CollectorListActivity : AppCompatActivity(), CollectorAdapter.OnItemClickL
 
     override fun onItemClick(collector: Collector) {
         println("IR a la siguiente pagina al dar click en un item")
-//        val intent = Intent(this, AlbumDetailsActivity::class.java)
-//        intent.putExtra("extra_object", collector as Serializable)
-//        startActivity(intent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

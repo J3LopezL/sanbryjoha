@@ -19,9 +19,6 @@ class CollectorAdapter (var collector:List<Collector>, private val listener:OnIt
                 view.tvCollectorName.text = collector.name
                 view.tvCollectorPhone.text = collector.telephone
                 view.tvCollectorEmail.text = collector.email
-//                view.tvAlbumArtist.text = collector.recordLabel
-//                view.tvAlbumYear.text = SimpleDateFormat("yyyy").format(collector.releaseDate)
-//                view.tvAlbumType.text = collector.genre
 
                 Picasso.get().load(collector.favoritePerformers[0].image)
                     .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)
@@ -39,12 +36,10 @@ class CollectorAdapter (var collector:List<Collector>, private val listener:OnIt
         }
 
 
-        // layaut que se va a inflar
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CollectorHolder {
             val layoutInflater = LayoutInflater.from(parent.context)
             return CollectorHolder(layoutInflater.inflate(R.layout.item_collector, parent, false))
         }
-        // uso de render para enviar el collector current y hacer el mapeo
         override fun onBindViewHolder(holder: CollectorHolder, position: Int) {
             holder.render(collector[position])
         }

@@ -7,8 +7,7 @@
     android:orientation="vertical"
     >
 
-    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/lyCollectorItem"
         android:layout_height="250dp"
         android:layout_width="350dp"
@@ -20,13 +19,13 @@
             android:layout_height="250dp"
             android:layout_marginBottom="60dp"
             android:scaleType="fitCenter"
-            />
+            android:contentDescription="@string/descriptionCollectorList" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:background="@drawable/album_border"
             android:orientation="horizontal"
             android:layout_gravity="bottom">
@@ -36,7 +35,8 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="10dp"
-                android:scaleType="fitEnd" />
+                android:scaleType="fitEnd"
+                android:contentDescription="@string/descriptionCollector" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -51,28 +51,28 @@
                     android:id="@+id/tvCollectorName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
                     android:textColor="#000000"
                     android:textSize="16sp"
-                    android:text="Collector Name" />
+                    android:text="@string/CollectorName" />
 
                 <TextView
                     android:id="@+id/tvCollectorPhone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/text_secondary"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
                     android:textSize="12sp"
-                    android:text="Collector telephone" />
+                    android:text="@string/CollectorTelephone" />
 
                 <TextView
                     android:id="@+id/tvCollectorEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/text_secondary"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
                     android:textSize="12sp"
-                    android:text="Collector email" />
+                    android:text="@string/CollectorEmail" />
             </LinearLayout>
 
         </LinearLayout>

@@ -4,17 +4,16 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import java.io.Serializable
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.project.vinilos.model.data.models.dataClass.Album
-import com.project.vinilos.databinding.ActivityAlbumsListBinding
-import com.project.vinilos.viewmodel.AlbumViewModel
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.isVisible
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.project.vinilos.R
+import com.project.vinilos.databinding.ActivityAlbumsListBinding
+import com.project.vinilos.model.data.models.dataClass.Album
+import com.project.vinilos.viewmodel.AlbumViewModel
+import java.io.Serializable
 
 
 class AlbumsListActivity : AppCompatActivity(), AlbumsAdapter.OnItemClickListener {
@@ -31,11 +30,11 @@ class AlbumsListActivity : AppCompatActivity(), AlbumsAdapter.OnItemClickListene
         initRecyclerView()
         albumViewModel.onCreate()
 
-        albumViewModel.isLoading.observe(this, Observer {
+        albumViewModel.isLoading.observe(this, {
             binding.loading.isVisible = it
         })
 
-        albumViewModel.album.observe(this, Observer {
+        albumViewModel.album.observe(this, {
             adapter.albums = it
             adapter.notifyDataSetChanged()
         })
