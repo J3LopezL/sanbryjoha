@@ -10,11 +10,11 @@ import com.squareup.picasso.MemoryPolicy
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_collector.view.*
 
-class CollectorAdapter (var collector:List<Collector>, private val listener:OnItemClickListener)
-    :RecyclerView.Adapter<CollectorAdapter.CollectorHolder>(){
+class CollectorsAdapter (var collector:List<Collector>, private val listener:OnItemClickListener)
+    :RecyclerView.Adapter<CollectorsAdapter.CollectorHolder>(){
 
-
-        inner class CollectorHolder(val view: View): RecyclerView.ViewHolder(view), View.OnClickListener{
+    var index = 0
+    inner class CollectorHolder(val view: View): RecyclerView.ViewHolder(view), View.OnClickListener{
             fun render(collector: Collector){
                 view.tvCollectorName.text = collector.name
                 view.tvCollectorPhone.text = collector.telephone
@@ -30,6 +30,7 @@ class CollectorAdapter (var collector:List<Collector>, private val listener:OnIt
             }
 
             override fun onClick(v: View?) {
+                index = adapterPosition
                 val collector = collector[adapterPosition]
                 listener.onItemClick(collector)
             }
@@ -37,6 +38,7 @@ class CollectorAdapter (var collector:List<Collector>, private val listener:OnIt
 
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CollectorHolder {
+
             val layoutInflater = LayoutInflater.from(parent.context)
             return CollectorHolder(layoutInflater.inflate(R.layout.item_collector, parent, false))
         }
