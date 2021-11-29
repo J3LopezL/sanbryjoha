@@ -523,7 +523,7 @@ class VisitanteTest2 {
                 withId(R.id.tvCollectorTitle), withText("Coleccionistas"),
                 withParent(
                     allOf(
-                        withId(R.id.FrameLayout),
+                        withId(R.id.collectorList),
                         withParent(withId(android.R.id.content))
                     )
                 ),
