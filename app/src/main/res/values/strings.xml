@@ -27,4 +27,16 @@
     <string name="descriptionArtistSelected">imagen que muestra al artista seleccionado</string>
     <string name="descriptionCollector">Imagen que identifica la descripción del coleccionista</string>
     <string name="descriptionCollectorList">imagen que mustra al coleccionista dentro de una lista</string>
+    <string name="nombre_de_la_canci_n">Nombre de la canción</string>
+    <string name="segundos">Segundos:</string>
+    <string name="minutos">Minutos:</string>
+    <string name="nombre_cancion">Nombre Cancion</string>
+    <string name="_00">00</string>
+    <string name="_0">0</string>
+    <string name="duraci_n_de_la_canci_n">Duración de la Canción:</string>
+    <string name="nombre_de_la_cancion">Nombre de la Canción</string>
+    <string name="agregar_canci_n">AGREGAR CANCIÓN</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="album">Album</string>
+    <string name="agregar">AGREGAR</string>
 </resources>
