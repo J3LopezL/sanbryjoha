@@ -13,6 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vinilos">
         <activity
+            android:name=".view.AlbumFormActivity"
+            android:exported="false"
+            android:parentActivityName=".view.AlbumsListActivity" />
+        <activity
             android:name=".view.CollectorDetailsActivity"
             android:exported="false" />
         <activity

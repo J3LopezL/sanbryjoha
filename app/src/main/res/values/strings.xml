@@ -5,6 +5,7 @@
     <string name="agregar_cancion">Agregar Canciones</string>
     <string name="visitor">Visitante</string>
     <string name="albums_title">Albumes</string>
+    <string name="albums_new">Nuevo Album</string>
     <string name="logout">Salir</string>
     <string name="title_activity_scrolling_album_details" />
     <string name="action_settings">Settings</string>
@@ -27,4 +28,11 @@
     <string name="descriptionArtistSelected">imagen que muestra al artista seleccionado</string>
     <string name="descriptionCollector">Imagen que identifica la descripción del coleccionista</string>
     <string name="descriptionCollectorList">imagen que mustra al coleccionista dentro de una lista</string>
+    <string name="album_name">Nombre del Album</string>
+    <string name="album_description">Descripción</string>
+    <string name="album_release_date">Fecha de Lanzamiento</string>
+    <string name="album_genre">Genero</string>
+    <string name="album_record_label">Etiqueta</string>
+    <string name="album_cover">URL Portada</string>
+    <string name="album_create">Create Album</string>
 </resources>
