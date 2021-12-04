@@ -12,11 +12,12 @@ import com.project.vinilos.R
 import com.project.vinilos.databinding.ActivityCollectorListBinding
 import com.project.vinilos.model.data.models.dataClass.Collector
 import com.project.vinilos.viewmodel.CollectorViewModel
+import java.io.Serializable
 
-class CollectorListActivity : AppCompatActivity(), CollectorAdapter.OnItemClickListener {
+class CollectorListActivity : AppCompatActivity(), CollectorsAdapter.OnItemClickListener {
     private lateinit var binding : ActivityCollectorListBinding
     private val collectorViewModel: CollectorViewModel by viewModels()
-    private lateinit var adapter:CollectorAdapter
+    private lateinit var adapter:CollectorsAdapter
     private val collectorList = mutableListOf<Collector>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,14 +43,13 @@ class CollectorListActivity : AppCompatActivity(), CollectorAdapter.OnItemClickL
     }
 
     private fun initRecyclerView(){
-        adapter = CollectorAdapter(collectorList, this)
+        adapter = CollectorsAdapter(collectorList, this)
         binding.rvCollector.layoutManager = LinearLayoutManager(this)
         binding.rvCollector.adapter = adapter
     }
 
     private fun onCollectorsClick() {
         binding.buttonFooterNavigation.setOnNavigationItemReselectedListener{
-
             when (it.itemId) {
                 R.id.ic_artists -> intent = Intent(this, PerformersListActivity::class.java)
                 R.id.ic_albums -> intent = Intent(this, AlbumsListActivity::class.java)
@@ -62,7 +62,10 @@ class CollectorListActivity : AppCompatActivity(), CollectorAdapter.OnItemClickL
     }
 
     override fun onItemClick(collector: Collector) {
-        println("IR a la siguiente pagina al dar click en un item")
+        val intent = Intent(this, CollectorDetailsActivity::class.java)
+        intent.putExtra("collectorSelected", collector as Serializable)
+        intent.putExtra("idCollectorSelected", adapter.index as Serializable)
+        startActivity(intent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

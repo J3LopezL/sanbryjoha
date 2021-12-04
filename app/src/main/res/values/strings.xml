@@ -5,6 +5,7 @@
     <string name="agregar_cancion">Agregar Canciones</string>
     <string name="visitor">Visitante</string>
     <string name="albums_title">Albumes</string>
+    <string name="albums_new">Nuevo Album</string>
     <string name="logout">Salir</string>
     <string name="title_activity_scrolling_album_details" />
     <string name="action_settings">Settings</string>
@@ -39,4 +40,29 @@
     <string name="cancelar">CANCELAR</string>
     <string name="album">Album</string>
     <string name="agregar">AGREGAR</string>
+    <string name="album_name">Nombre del Album</string>
+    <string name="album_description">Descripción</string>
+    <string name="album_release_date">Año de Lanzamiento</string>
+    <string name="album_genre">Genero</string>
+    <string name="album_record_label">Compañía Discográfica</string>
+    <string name="album_cover">URL Portada</string>
+    <string name="album_create">Create Album</string>
+    <string name="invalid_form">Formulario invalido, por favor llenar todos los campos.</string>
+    <string name="error_creating_album">Error creando este album.</string>
+
+
+    <string-array name="genres">
+        <item name="classical">Classical</item>
+        <item name="salsa">Salsa</item>
+        <item name="rock">Rock</item>
+        <item name="folk">Folk</item>
+    </string-array>
+
+    <string-array name="recordLabels">
+        <item name="sony">Sony Music</item>
+        <item name="emi">EMI</item>
+        <item name="discosFuentes">Discos Fuentes</item>
+        <item name="elektra">Elektra</item>
+        <item name="faniaRecords">Fania Records</item>
+    </string-array>
 </resources>

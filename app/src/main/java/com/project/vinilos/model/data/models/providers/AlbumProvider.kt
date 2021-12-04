@@ -5,5 +5,6 @@ import com.project.vinilos.model.data.models.dataClass.Album
 class AlbumProvider {
     companion object {
        var albums:List<Album> = emptyList()
+        var album:Album = Album()
     }
 }
