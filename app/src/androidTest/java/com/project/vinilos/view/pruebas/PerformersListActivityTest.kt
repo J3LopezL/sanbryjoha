@@ -1,4 +1,4 @@
-package com.project.vinilos.view.unit
+package com.project.vinilos.view.pruebas
 
 import android.util.Log
 import androidx.recyclerview.widget.RecyclerView

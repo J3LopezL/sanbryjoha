@@ -1,4 +1,4 @@
-package com.project.vinilos.view.unit
+package com.project.vinilos.view.pruebas
 
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.assertion.ViewAssertions
