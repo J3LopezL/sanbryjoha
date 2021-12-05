@@ -7,7 +7,6 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.lifecycle.Observer
 import com.project.vinilos.R
 import com.project.vinilos.databinding.ActivityAddTracksAlbumBinding
 import com.project.vinilos.model.data.models.dataClass.Album
@@ -51,7 +50,7 @@ class AddTracksAlbumActivity : AppCompatActivity() {
             }
         }
 
-        viewModel.trackResponse.observe(this, Observer {
+        viewModel.trackResponse.observe(this, {
             if (it.isSuccessful){
                 val trackResponse = it.body()
                 Toast.makeText(this, R.string.track_associated, Toast.LENGTH_SHORT).show()

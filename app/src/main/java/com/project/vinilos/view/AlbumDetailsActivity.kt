@@ -22,7 +22,7 @@ class AlbumDetailsActivity : AppCompatActivity() {
     private var itemSelect:String?=null
     private var itemImage:String?=null
     private lateinit var binding: ActivityAlbumDetailsBinding
-    private lateinit var adapter:TracksAdapter
+    lateinit var adapter:TracksAdapter
     private val tracksList = mutableListOf<Tracks>()
     private val performersList = mutableListOf<Performer>()
 

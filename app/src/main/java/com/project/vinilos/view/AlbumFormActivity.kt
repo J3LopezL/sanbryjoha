@@ -10,7 +10,6 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.lifecycle.Observer
 import com.project.vinilos.R
 import com.project.vinilos.databinding.ActivityAlbumFormBinding
 import com.project.vinilos.viewmodel.AlbumViewModel
@@ -65,7 +64,7 @@ class AlbumFormActivity : AppCompatActivity() {
             }
         }
 
-        viewModel.albumResponse.observe(this, Observer {
+        viewModel.albumResponse.observe(this, {
             if (it.isSuccessful){
                 Toast.makeText(this, R.string.album_created, Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, AlbumsListActivity::class.java)
