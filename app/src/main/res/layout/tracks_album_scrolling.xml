@@ -8,7 +8,8 @@
     android:id="@+id/scTracksAlbum"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".view.AddTracksAlbumActivity"
-    tools:showIn="@layout/activity_add_tracks_album">
+    tools:showIn="@layout/activity_add_tracks_album"
+    tools:keep="@layout/tracks_album_scrolling">
 
     <LinearLayout
         android:layout_width="match_parent"

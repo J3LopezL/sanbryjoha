@@ -1,20 +1,17 @@
 package com.project.vinilos.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.project.vinilos.R
-
+import com.project.vinilos.databinding.ActivityAlbumDetailsBinding
 import com.project.vinilos.model.data.models.dataClass.Album
 import com.project.vinilos.model.data.models.dataClass.Performer
 import com.project.vinilos.model.data.models.dataClass.Tracks
-
-import com.project.vinilos.databinding.ActivityAlbumDetailsBinding
 import com.squareup.picasso.MemoryPolicy
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.album_scrolling_content.*
@@ -22,10 +19,10 @@ import java.io.Serializable
 
 class AlbumDetailsActivity : AppCompatActivity() {
 
-    public var itemSelect:String?=null
-    public var itemImage:String?=null
+    private var itemSelect:String?=null
+    private var itemImage:String?=null
     private lateinit var binding: ActivityAlbumDetailsBinding
-    private lateinit var adapter:TracksAdapter
+    lateinit var adapter:TracksAdapter
     private val tracksList = mutableListOf<Tracks>()
     private val performersList = mutableListOf<Performer>()
 

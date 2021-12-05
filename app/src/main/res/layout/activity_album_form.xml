@@ -44,7 +44,8 @@
                 android:ems="10"
                 android:hint="@string/album_name"
                 android:inputType="textPersonName"
-                android:paddingHorizontal="12dp" />
+                android:paddingHorizontal="12dp"
+                android:importantForAutofill="no" />
 
             <EditText
                 android:id="@+id/editTextAlbumReleaseDate"
@@ -55,7 +56,8 @@
                 android:ems="10"
                 android:hint="@string/album_release_date"
                 android:inputType="date"
-                android:paddingHorizontal="12dp" />
+                android:paddingHorizontal="12dp"
+                android:importantForAutofill="no" />
 
             <EditText
                 android:id="@+id/editTextAlbumDescription"
@@ -66,7 +68,8 @@
                 android:ems="10"
                 android:hint="@string/album_description"
                 android:inputType="textPersonName"
-                android:paddingHorizontal="12dp" />
+                android:paddingHorizontal="12dp"
+                android:importantForAutofill="no" />
 
             <Spinner
                 android:id="@+id/editAlbumGenre"
@@ -86,7 +89,8 @@
                 android:ems="10"
                 android:hint="@string/album_cover"
                 android:inputType="textPersonName"
-                android:paddingHorizontal="12dp" />
+                android:paddingHorizontal="12dp"
+                android:importantForAutofill="no" />
 
             <Spinner
                 android:id="@+id/editAlbumRecordLabel"
@@ -110,17 +114,19 @@
                     android:text="@string/cancelar"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight=".40" />
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight=".40"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/buttonSaveAlbum"
                     android:background="@drawable/login_button"
                     android:text="@string/agregar"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".40" />
+                    android:layout_weight=".40"
+                    style="?android:attr/buttonBarButtonStyle" />
 
             </LinearLayout>
         </LinearLayout>

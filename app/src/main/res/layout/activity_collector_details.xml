@@ -60,8 +60,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
-                android:text="Nombre de coleccionista"
+                android:layout_marginStart="15dp"
+                android:text="@string/collector_name"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -87,8 +87,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
-                android:text="Email de coleccionista"
+                android:layout_marginStart="15dp"
+                android:text="@string/collector_email"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -113,8 +113,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
-                android:text="Telefono de coleccionista"
+                android:layout_marginStart="15dp"
+                android:text="@string/collector_phone"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -143,8 +143,7 @@
             android:layout_width="378dp"
             android:layout_height="22dp"
             android:layout_marginStart="16dp"
-            android:layout_marginLeft="10dp"
-            android:text="Artistas Favoritos "
+            android:text="@string/favorite_performers"
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"

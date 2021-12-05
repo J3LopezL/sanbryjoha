@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.snackbar.Snackbar
 import com.project.vinilos.R
 import com.project.vinilos.databinding.ActivityAlbumsListBinding
 import com.project.vinilos.model.data.models.dataClass.Album

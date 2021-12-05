@@ -6,11 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.project.vinilos.R
 import com.project.vinilos.model.data.models.dataClass.Comments
-import com.project.vinilos.model.data.models.dataClass.Performer
-import com.squareup.picasso.MemoryPolicy
-import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_comments_collector.view.*
-import kotlinx.android.synthetic.main.item_performer.view.*
 
 class CommentsAdapter (
     var comments:List<Comments>,
@@ -22,7 +18,7 @@ class CommentsAdapter (
         fun render(comment: Comments){
             view.descriptionComments.text = comment.description
             view.personComments.text = comment.id.toString()
-            view.rating.setRating(comment.rating.toFloat())
+            view.rating.rating = comment.rating.toFloat()
         }
 
         override fun onClick(v: View?) {

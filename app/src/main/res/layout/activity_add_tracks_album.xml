@@ -79,7 +79,7 @@
                     android:digits="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15"
                     android:gravity="center"
                     android:background="#ECEFF1"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
                     android:hint="@string/_0"
                     android:importantForAutofill="no"
                     android:inputType="number"
@@ -105,7 +105,7 @@
                     android:importantForAutofill="no"
                     android:inputType="number"
                     android:background="#ECEFF1"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
                     android:textSize="18sp"
                     app:counterEnabled="true"
                     app:counterMaxLength="2"
@@ -125,17 +125,19 @@
                     android:text="@string/cancelar"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight=".40" />
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight=".40"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/bAddTracks"
                     android:background="@drawable/login_button"
                     android:text="@string/agregar"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".40" />
+                    android:layout_weight=".40"
+                    style="?android:attr/buttonBarButtonStyle" />
 
             </LinearLayout>
         </LinearLayout>
