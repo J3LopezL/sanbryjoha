@@ -6,6 +6,7 @@
     <string name="visitor">Visitante</string>
     <string name="albums_title">Albumes</string>
     <string name="albums_new">Nuevo Album</string>
+    <string name="tracks_new">Agregar Canción a Album:</string>
     <string name="logout">Salir</string>
     <string name="title_activity_scrolling_album_details" />
     <string name="action_settings">Settings</string>
@@ -46,9 +47,13 @@
     <string name="album_genre">Genero</string>
     <string name="album_record_label">Compañía Discográfica</string>
     <string name="album_cover">URL Portada</string>
-    <string name="album_create">Create Album</string>
+    <string name="album_create">CREAR ALBUM</string>
     <string name="invalid_form">Formulario invalido, por favor llenar todos los campos.</string>
     <string name="error_creating_album">Error creando este album.</string>
+    <string name="error_creating_track">Error creando esta asociación.</string>
+    <string name="track_associated">Canción asociada existosamente</string>
+    <string name="album_created">Album creado existosamente</string>
+
 
 
     <string-array name="genres">
