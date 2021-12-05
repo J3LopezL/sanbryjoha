@@ -80,7 +80,7 @@
 
                 <EditText
                     android:id="@+id/etSeconds"
-                    android:layout_width="39dp"
+                    android:layout_width="48dp"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:hint="@string/_00"
