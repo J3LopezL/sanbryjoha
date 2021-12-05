@@ -50,9 +50,6 @@
     <string name="ranking">ranking</string>
     <string name="artist_name">Nombre Artista</string>
 
-
-
-
     <string-array name="genres">
         <item name="classical">Classical</item>
         <item name="salsa">Salsa</item>
