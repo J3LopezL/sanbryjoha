@@ -30,7 +30,7 @@
 
     <style name="spinner_style" parent="Widget.AppCompat.Spinner">
         <item name="backgroundTint">@color/black</item>
-        <item name="background">@color/inputs</item>
+        <item name="background">@color/white</item>
     </style>
 
 </resources>
