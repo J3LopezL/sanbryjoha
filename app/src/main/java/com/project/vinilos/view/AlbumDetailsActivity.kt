@@ -1,20 +1,17 @@
 package com.project.vinilos.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.project.vinilos.R
-
+import com.project.vinilos.databinding.ActivityAlbumDetailsBinding
 import com.project.vinilos.model.data.models.dataClass.Album
 import com.project.vinilos.model.data.models.dataClass.Performer
 import com.project.vinilos.model.data.models.dataClass.Tracks
-
-import com.project.vinilos.databinding.ActivityAlbumDetailsBinding
 import com.squareup.picasso.MemoryPolicy
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.album_scrolling_content.*

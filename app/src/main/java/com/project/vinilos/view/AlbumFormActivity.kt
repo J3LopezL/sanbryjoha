@@ -1,26 +1,20 @@
 package com.project.vinilos.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputFilter
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.Observer
 import com.project.vinilos.R
 import com.project.vinilos.databinding.ActivityAlbumFormBinding
-import com.project.vinilos.model.data.repositories.AlbumRepository
 import com.project.vinilos.viewmodel.AlbumViewModel
-import retrofit2.Response
-import java.io.Serializable
-import java.sql.Time
 import java.sql.Timestamp
-import java.time.Instant
 
 class AlbumFormActivity : AppCompatActivity() {
     private lateinit var binding : ActivityAlbumFormBinding

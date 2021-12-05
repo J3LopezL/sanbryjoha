@@ -2,33 +2,17 @@ package com.project.vinilos.view
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.Observer
-import com.android.volley.Response
-import com.android.volley.toolbox.StringRequest
-import com.android.volley.toolbox.Volley
-import com.google.gson.Gson
 import com.project.vinilos.R
 import com.project.vinilos.databinding.ActivityAddTracksAlbumBinding
-import com.project.vinilos.model.core.RetrofitHelper
 import com.project.vinilos.model.data.models.dataClass.Album
-import com.project.vinilos.model.data.models.dataClass.Tracks
-import com.project.vinilos.viewmodel.AlbumViewModel
 import com.project.vinilos.viewmodel.TrackViewModel
-import com.squareup.picasso.MemoryPolicy
-import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_add_tracks_album.*
-import kotlinx.android.synthetic.main.item_input_track.*
 import java.io.Serializable
-import kotlinx.serialization.json.Json
-import java.sql.Timestamp
 
 class AddTracksAlbumActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddTracksAlbumBinding
