@@ -23,7 +23,7 @@
         android:id="@+id/rvAlbums"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"></androidx.recyclerview.widget.RecyclerView>
+        android:layout_marginTop="100dp" />
 
     <ProgressBar
         android:id="@+id/loading"
@@ -55,7 +55,7 @@
         android:background="@color/primary"
         app:itemIconTint="#FFFFFF"
         app:itemTextColor="#FFFFFF"
-        app:menu="@menu/menu_footer"></com.google.android.material.bottomnavigation.BottomNavigationView>
+        app:menu="@menu/menu_footer" />
 
 </FrameLayout>
 
