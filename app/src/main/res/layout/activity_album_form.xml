@@ -110,14 +110,14 @@
                     android:text="@string/cancelar"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
                     android:layout_weight=".40" />
 
                 <Button
                     android:id="@+id/buttonSaveAlbum"
                     android:background="@drawable/login_button"
                     android:text="@string/agregar"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight=".40" />
