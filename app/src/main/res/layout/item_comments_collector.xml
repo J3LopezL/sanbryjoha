@@ -30,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
-                android:text="Comentarios"
+                android:text="@string/comments"
                 android:textColor="@color/primary"
                 android:textSize="14sp" />
             <TextView
@@ -39,7 +39,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
-                android:text="Descripción"
+                android:text="@string/descriptions"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 tools:layout_editor_absoluteX="12dp"
@@ -51,7 +51,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="40dp"
-                android:text="ranking"
+                android:text="@string/ranking"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 tools:layout_editor_absoluteX="12dp"

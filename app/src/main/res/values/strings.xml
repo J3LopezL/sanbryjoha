@@ -53,6 +53,14 @@
     <string name="error_creating_track">Error creando esta asociación.</string>
     <string name="track_associated">Canción asociada existosamente</string>
     <string name="album_created">Album creado existosamente</string>
+    <string name="collector_name">Nombre de coleccionista</string>
+    <string name="collector_email">Email de coleccionista</string>
+    <string name="collector_phone">Telefono de coleccionista</string>
+    <string name="favorite_performers">Artistas Favoritos</string>
+    <string name="comments">Comentarios</string>
+    <string name="descriptions">Descripción</string>
+    <string name="ranking">ranking</string>
+    <string name="artist_name">Nombre Artista</string>
 
 
 
