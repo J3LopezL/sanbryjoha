@@ -6,7 +6,6 @@ import com.project.vinilos.model.data.network.AlbumService
 import retrofit2.Response
 
 class AlbumRepository {
-
     private val api = AlbumService()
 
     suspend fun getAllAlbums():List<Album>{

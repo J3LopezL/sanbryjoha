@@ -17,6 +17,7 @@ import com.project.vinilos.databinding.ActivityAlbumFormBinding
 import com.project.vinilos.model.data.repositories.AlbumRepository
 import com.project.vinilos.viewmodel.AlbumViewModel
 import retrofit2.Response
+import java.io.Serializable
 import java.sql.Time
 import java.sql.Timestamp
 import java.time.Instant
@@ -72,12 +73,18 @@ class AlbumFormActivity : AppCompatActivity() {
 
         viewModel.albumResponse.observe(this, Observer {
             if (it.isSuccessful){
+                Toast.makeText(this, R.string.album_created, Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, AlbumsListActivity::class.java)
                 startActivity(intent)
             }else{
                 Toast.makeText(this, R.string.error_creating_album, Toast.LENGTH_SHORT).show()
             }
         })
+
+        binding.buttonCancelAlbum.setOnClickListener {
+            val intent = Intent(this, AlbumsListActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     // extension function to set edit text maximum length

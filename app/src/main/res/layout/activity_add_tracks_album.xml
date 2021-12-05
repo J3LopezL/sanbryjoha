@@ -1,59 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/atTracksAlbum"
-    android:fitsSystemWindows="true"
-    tools:context=".view.AddTracksAlbumActivity">
+    android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/app_bar_height"
-        android:fitsSystemWindows="true"
-        android:theme="@style/Theme.Vinilos.AppBarOverlay">
+        android:layout_height="wrap_content"
+        android:id="@+id/atTracksAlbum"
+        tools:context=".view.AddTracksAlbumActivity">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/toolbar_layout"
+        <include
+            android:id="@+id/include"
+            layout="@layout/action_bar_toolbar" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            app:contentScrim="@color/primary"
-            app:expandedTitleGravity="center"
-            app:expandedTitleMarginBottom="64dp"
-            app:expandedTitleTextAppearance="@style/TextAppearance.Design.CollapsingToolbar.Expanded"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:toolbarId="@+id/toolbar">
+            android:orientation="vertical"
+            android:padding="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/ivAlbumTrack"
+            <TextView
+                android:id="@+id/tvAlbumTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:text="@string/tracks_new"
+                android:layout_marginBottom="5dp"
+                android:textColor="#000000"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/tvTrackAlbumTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:textColor="#000000"
+                android:textSize="19sp" />
+
+            <EditText
+                android:id="@+id/etTrackName"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginBottom="15dp"
+                android:background="#ECEFF1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/nombre_de_la_cancion"
+                android:importantForAutofill="no"
+                android:paddingHorizontal="12dp" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:contentDescription="@null"
-                android:minHeight="100dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/album"
-                app:layout_collapseMode="parallax"
-                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed" />
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
+                <TextView
+                    android:id="@+id/tvMins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="45dp"
+                    android:text="@string/minutos"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/etMinutes"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:digits="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15"
+                    android:gravity="center"
+                    android:background="#ECEFF1"
+                    android:layout_marginLeft="5dp"
+                    android:hint="@string/_0"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="2"
+                    tools:ignore="LabelFor,TouchTargetSizeCheck,DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/tvSegs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/segundos"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/etSeconds"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:gravity="center"
+                    android:hint="@string/_00"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:background="#ECEFF1"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="18sp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="2"
+                    tools:ignore="LabelFor,TouchTargetSizeCheck,TextContrastCheck,TextContrastCheck" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="@null"
-                app:layout_collapseMode="pin"
-                app:layout_scrollFlags="scroll|enterAlways"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
 
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-    </com.google.android.material.appbar.AppBarLayout>
+                <Button
+                    android:id="@+id/bCancelTracks"
+                    android:background="@drawable/login_button"
+                    android:text="@string/cancelar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight=".40" />
 
-    <include
-        android:id="@+id/scTracksAlbum"
-        layout="@layout/tracks_album_scrolling" />
+                <Button
+                    android:id="@+id/bAddTracks"
+                    android:background="@drawable/login_button"
+                    android:text="@string/agregar"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".40" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
