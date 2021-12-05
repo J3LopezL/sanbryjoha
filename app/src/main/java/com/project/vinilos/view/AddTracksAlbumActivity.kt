@@ -38,7 +38,7 @@ class AddTracksAlbumActivity : AppCompatActivity() {
         binding = ActivityAddTracksAlbumBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var album = intent.extras?.get("extra_object") as Album
+        val album = intent.extras?.get("extra_object") as Album
 
         val etTrackName = binding.etTrackName
         val etMinutes = binding.etMinutes

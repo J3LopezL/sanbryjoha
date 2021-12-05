@@ -88,7 +88,7 @@ class AlbumFormActivity : AppCompatActivity() {
     }
 
     // extension function to set edit text maximum length
-    fun EditText.setMaxLength(maxLength: Int){
+    private fun EditText.setMaxLength(maxLength: Int){
         filters = arrayOf<InputFilter>(InputFilter.LengthFilter(maxLength))
     }
 

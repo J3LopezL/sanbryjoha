@@ -22,7 +22,7 @@ class CommentsAdapter (
         fun render(comment: Comments){
             view.descriptionComments.text = comment.description
             view.personComments.text = comment.id.toString()
-            view.rating.setRating(comment.rating.toFloat())
+            view.rating.rating = comment.rating.toFloat()
         }
 
         override fun onClick(v: View?) {
