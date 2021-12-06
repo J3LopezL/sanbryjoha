@@ -38,7 +38,7 @@
             <EditText
                 android:id="@+id/editTextAlbumName"
                 android:layout_width="match_parent"
-                android:layout_height="46dp"
+                android:layout_height="48dp"
                 android:layout_marginBottom="15dp"
                 android:background="#ECEFF1"
                 android:ems="10"
@@ -50,7 +50,7 @@
             <EditText
                 android:id="@+id/editTextAlbumReleaseDate"
                 android:layout_width="match_parent"
-                android:layout_height="46dp"
+                android:layout_height="48dp"
                 android:layout_marginBottom="15dp"
                 android:background="#ECEFF1"
                 android:ems="10"
@@ -62,7 +62,7 @@
             <EditText
                 android:id="@+id/editTextAlbumDescription"
                 android:layout_width="match_parent"
-                android:layout_height="46dp"
+                android:layout_height="48dp"
                 android:layout_marginBottom="15dp"
                 android:background="#ECEFF1"
                 android:ems="10"
@@ -74,7 +74,7 @@
             <Spinner
                 android:id="@+id/editAlbumGenre"
                 android:layout_width="match_parent"
-                android:layout_height="46dp"
+                android:layout_height="48dp"
                 android:layout_marginBottom="15dp"
                 android:background="#ECEFF1"
                 android:hint="@string/album_genre"
@@ -83,7 +83,7 @@
             <EditText
                 android:id="@+id/editTextAlbumCover"
                 android:layout_width="match_parent"
-                android:layout_height="46dp"
+                android:layout_height="48dp"
                 android:layout_marginBottom="15dp"
                 android:background="#ECEFF1"
                 android:ems="10"
@@ -95,7 +95,7 @@
             <Spinner
                 android:id="@+id/editAlbumRecordLabel"
                 android:layout_width="match_parent"
-                android:layout_height="46dp"
+                android:layout_height="48dp"
                 android:background="#ECEFF1"
                 android:layout_marginBottom="15dp"
                 android:hint="@string/album_record_label"
