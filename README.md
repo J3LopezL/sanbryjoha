@@ -22,4 +22,11 @@
 4. Dentro de la aplicación buscamos el apartado "Instalar aplicaciones desconocidas" y activamos la casilla.
 5. Y tenemos permisos para instalar nuestra aplicación.
 
+## Instalación y Ejecución última versión de la APP.
+1. Descargue el archivo [apk]() de la ùltima version e instalelo en su móvil con sistema Android Lollipop o superior.
+2. Dependiendo de la versión de Android que use sus dispositivo permitirá la instalción o solicitará permisos.
+3. Si necesita permisos en la zona inferior de la pantalla veremos un aviso indicando que "no se pueden instalar aplicaciones de orígenes desconocidos" y nos invita a entrar en los "Ajustes".
+4. Dentro de la aplicación buscamos el apartado "Instalar aplicaciones desconocidas" y activamos la casilla.
+5. Y tenemos permisos para instalar nuestra aplicación.
+
 ### Bogotá - Colombia
