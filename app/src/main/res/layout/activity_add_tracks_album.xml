@@ -47,7 +47,7 @@
             <EditText
                 android:id="@+id/etTrackName"
                 android:layout_width="match_parent"
-                android:layout_height="46dp"
+                android:layout_height="48dp"
                 android:layout_marginBottom="15dp"
                 android:background="@color/input_background"
                 android:ems="10"
@@ -76,7 +76,7 @@
                 <EditText
                     android:id="@+id/etMinutes"
                     android:layout_width="46dp"
-                    android:layout_height="46dp"
+                    android:layout_height="48dp"
                     android:digits="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15"
                     android:gravity="center"
                     android:background="@color/input_background"                    android:layout_marginStart="5dp"
@@ -99,7 +99,7 @@
                 <EditText
                     android:id="@+id/etSeconds"
                     android:layout_width="46dp"
-                    android:layout_height="46dp"
+                    android:layout_height="48dp"
                     android:gravity="center"
                     android:hint="@string/_00"
                     android:background="@color/input_background"
