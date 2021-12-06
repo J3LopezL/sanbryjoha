@@ -43,7 +43,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="76dp"
-        app:backgroundTint="#03DAC5"
+        app:backgroundTint="#038674"
         app:tint="#FFFFFF"
         app:srcCompat="@android:drawable/ic_input_add"
         android:contentDescription="Boton que nos lleva a la pantalla de crear album"/>
