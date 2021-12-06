@@ -45,7 +45,8 @@
         android:layout_marginBottom="76dp"
         app:backgroundTint="#03DAC5"
         app:tint="#FFFFFF"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:contentDescription="Boton que nos lleva a la pantalla de crear album"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/button_footer_navigation"
