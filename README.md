@@ -5,6 +5,12 @@
 ### Bogotá - Colombia
 <br>
 
+Bryan Algutria 202125159 <br>
+Harold Funeme 202114521 <br>
+José López 200919447 <br>
+Santiago Salinas 202114041<br>
+
+
 ## Ejecución de la plicación en el equipo.
 
 1. Descargue el repositorio mediante una de las siguientes opciones ```git clone https://github.com/J3LopezL/sanbryjoha.git```, ```git clone git@github.com:J3LopezL/sanbryjoha.git```, GitHub CLI ó descargando el archivo .zip y descomprimiendolo.
