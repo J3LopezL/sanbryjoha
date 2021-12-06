@@ -163,8 +163,6 @@ class ColeccionistaTest  {
             )
         )
         appCompatImageButton.perform(click())
-
-
     }
 
     private fun childAtPosition(

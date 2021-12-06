@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/album_border"
+        android:orientation="horizontal"
+        android:layout_gravity="top">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivPerformerAvatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="5sp"
+            android:layout_marginBottom="5sp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/run" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:layout_gravity="top">
+
+            <TextView
+                android:id="@+id/tvPerformerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/artist_name"
+                android:textColor="@color/primary"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tvDescriptionPerformer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_secondary"
+                android:layout_marginStart="5dp"
+                android:textSize="14sp"
+                android:text="@string/CollectorTelephone" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

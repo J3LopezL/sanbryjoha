@@ -2,39 +2,51 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/albumsListActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.AlbumsListActivity">
 
-    <include layout="@layout/action_bar_toolbar"/>
+    <include layout="@layout/action_bar_toolbar" />
 
     <TextView
         android:id="@+id/tvAlbumTitle"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="70dp"
-        android:textSize="16sp"
-        android:textColor="#000000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/albums_title" />
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/albums_title"
+        android:textColor="#000000"
+        android:textSize="16sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvAlbums"
-        android:layout_marginTop="100dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp" />
 
     <ProgressBar
         android:id="@+id/loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:layout_gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/newAlbum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="76dp"
+        app:backgroundTint="#038674"
+        app:tint="#FFFFFF"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:contentDescription="Boton que nos lleva a la pantalla de crear album"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/button_footer_navigation"
@@ -42,11 +54,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:background="@color/primary"
-        app:menu="@menu/menu_footer"
         app:itemIconTint="#FFFFFF"
         app:itemTextColor="#FFFFFF"
-        >
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+        app:menu="@menu/menu_footer" />
 
 </FrameLayout>
 

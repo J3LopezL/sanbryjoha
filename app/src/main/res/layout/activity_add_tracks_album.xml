@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/atTracksAlbum"
+        tools:context=".view.AddTracksAlbumActivity">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/action_bar_toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvAlbumTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:text="@string/tracks_new"
+                android:layout_marginBottom="5dp"
+                android:textColor="#000000"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/tvTrackAlbumTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:textColor="#000000"
+                android:textSize="19sp" />
+
+            <EditText
+                android:id="@+id/etTrackName"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/input_background"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/text_secondary"
+                android:hint="@string/nombre_de_la_cancion"
+                android:importantForAutofill="no"
+                android:paddingHorizontal="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvMins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="45dp"
+                    android:text="@string/minutos"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/etMinutes"
+                    android:layout_width="38dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@color/input_background"
+                    android:digits="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15"
+                    android:gravity="center"
+                    android:hint="@string/_0"
+                    android:importantForAutofill="no"
+                    android:textColorHint="@color/text_secondary"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="2"
+                    tools:ignore="LabelFor,TouchTargetSizeCheck,DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/tvSegs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/segundos"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/etSeconds"
+                    android:layout_width="46dp"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:hint="@string/_00"
+                    android:background="@color/input_background"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:layout_marginStart="5dp"
+                    android:textSize="18sp"
+                    android:textColorHint="@color/text_secondary"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="2"
+                    tools:ignore="LabelFor,TouchTargetSizeCheck,TextContrastCheck,TextContrastCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bCancelTracks"
+                    android:background="@drawable/login_button"
+                    android:text="@string/cancelar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight=".40"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    android:id="@+id/bAddTracks"
+                    android:background="@drawable/login_button"
+                    android:text="@string/agregar"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".40"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

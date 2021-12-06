@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:shape="rectangle"
+    tools:keep="@drawable/cancel_button">
+
+    <corners
+        android:radius="100dp"
+        />
+    <solid
+        android:color="@color/purple_200"
+        />
+    <padding
+        android:left="0dp"
+        android:top="0dp"
+        android:right="0dp"
+        android:bottom="0dp"
+        />
+    <size
+        android:width="219dp"
+        android:height="48dp"
+        />
+</shape>

@@ -31,11 +31,11 @@ class PerformerDetailsActivity : AppCompatActivity(), AlbumsAdapter.OnItemClickL
             albumsList.add(album)
         }
 
-        setSupportActionBar(findViewById(R.id.performerToolbar))
         Picasso.get().load(performer.image)
             .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)
             .into(binding.bgPerformerImage)
 
+        setSupportActionBar(findViewById(R.id.performerToolbar))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val title = findViewById<TextView>(R.id.tvPerformerDetailsName)

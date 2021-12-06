@@ -26,5 +26,11 @@
 
     <style name="Theme.Vinilos.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="Theme.Vinilos.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.Vinilos.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" tools:keep="@style/Theme_Vinilos_PopupOverlay" />
+
+    <style name="spinner_style" parent="Widget.AppCompat.Spinner" tools:keep="@style/spinner_style">
+        <item name="backgroundTint">@color/black</item>
+        <item name="background">@color/white</item>
+    </style>
+
 </resources>

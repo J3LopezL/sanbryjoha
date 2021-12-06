@@ -1,26 +1,28 @@
 package com.project.vinilos.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.project.vinilos.R
-
+import com.project.vinilos.databinding.ActivityAlbumDetailsBinding
 import com.project.vinilos.model.data.models.dataClass.Album
 import com.project.vinilos.model.data.models.dataClass.Performer
 import com.project.vinilos.model.data.models.dataClass.Tracks
-
-import com.project.vinilos.databinding.ActivityAlbumDetailsBinding
 import com.squareup.picasso.MemoryPolicy
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.album_scrolling_content.*
+import java.io.Serializable
 
 class AlbumDetailsActivity : AppCompatActivity() {
 
+    private var itemSelect:String?=null
+    private var itemImage:String?=null
     private lateinit var binding: ActivityAlbumDetailsBinding
-    private lateinit var adapter:TracksAdapter
+    lateinit var adapter:TracksAdapter
     private val tracksList = mutableListOf<Tracks>()
     private val performersList = mutableListOf<Performer>()
 
@@ -36,15 +38,21 @@ class AlbumDetailsActivity : AppCompatActivity() {
             tracksList.add(track)
         }
 
+        addTracks.setOnClickListener {
+            val intent = Intent(this, AddTracksAlbumActivity::class.java)
+            intent.putExtra("extra_object", album as Serializable)
+            startActivity(intent)
+        }
+
         for(performer in album.performers){
             performersList.add(performer)
         }
 
-        setSupportActionBar(findViewById(R.id.toolbar))
         Picasso.get().load(album.cover)
             .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)
             .into(binding.bgAlbumImage)
 
+        setSupportActionBar(findViewById(R.id.toolbar))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val title = findViewById<TextView>(R.id.tvAlbumDetailsTitle)
@@ -55,6 +63,9 @@ class AlbumDetailsActivity : AppCompatActivity() {
 
         val artist = findViewById<TextView>(R.id.tvAlbumDetailsArtist)
         artist.text = album.recordLabel
+
+        itemSelect = album.id.toString()
+        itemImage = album.cover
     }
 
     private fun initRecyclerView(){

@@ -6,4 +6,6 @@ data class Tracks (
     val id : Int,
     val name : String,
     val duration : String
-) : Serializable
+) : Serializable {
+    constructor() : this(0, "", "")
+}

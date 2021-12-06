@@ -4,18 +4,21 @@
     <item
         android:id="@+id/ic_collecotrs"
         android:icon="@drawable/ic_baseline_collectors"
-        android:title="@string/collectors">
+        android:title="@string/collectors"
+        android:contentDescription="Boton de Coleccionistas">
     </item>
 
     <item
         android:id="@+id/ic_artists"
         android:icon="@drawable/ic_baseline_performers"
-        android:title="@string/performers">
+        android:title="@string/performers"
+        android:contentDescription="Boton de Artistas">
     </item>
 
     <item
         android:id="@+id/ic_albums"
         android:icon="@drawable/ic_baseline_albums"
-        android:title="@string/albumes">
+        android:title="@string/albumes"
+        android:contentDescription="Boton de Albumes">
     </item>
 </menu>

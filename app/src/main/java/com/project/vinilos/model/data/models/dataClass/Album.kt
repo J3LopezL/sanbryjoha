@@ -11,7 +11,13 @@ data class Album (
     val description:String,
     val genre:String,
     val recordLabel:String,
-    val tracks : List<Tracks>,
+    var tracks : List<Tracks>,
     val performers : List<Performer>,
     val comments : List<Comments>
-) : Serializable
+) : Serializable {
+    constructor() : this(0, "",
+        "", Timestamp(System.currentTimeMillis()),
+        "", "",
+        "", emptyList(),
+        emptyList(), emptyList())
+}

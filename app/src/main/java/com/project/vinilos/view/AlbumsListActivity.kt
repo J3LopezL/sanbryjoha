@@ -45,6 +45,11 @@ class AlbumsListActivity : AppCompatActivity(), AlbumsAdapter.OnItemClickListene
         supportActionBar?.title = "Vinilos App"
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        binding.newAlbum.setOnClickListener { view ->
+            val intent = Intent(this, AlbumFormActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun initRecyclerView(){
